@@ -28,7 +28,8 @@ public class BurgerTest {
     public void testAddIngredientAddsOneIngredient() {
         Burger burger = new Burger();
         burger.addIngredient(ingredient);
-        Assert.assertEquals(1, burger.ingredients.size());
+        int expectedIndex = 1;
+        Assert.assertEquals(expectedIndex, burger.ingredients.size());
     }
 
     @Test
@@ -36,7 +37,8 @@ public class BurgerTest {
         Burger burger = new Burger();
         burger.addIngredient(ingredient);
         burger.removeIngredient(0);
-        Assert.assertEquals(0, burger.ingredients.size());
+        int expectedIndex = 0;
+        Assert.assertEquals(expectedIndex, burger.ingredients.size());
     }
 
     @Test
@@ -49,7 +51,8 @@ public class BurgerTest {
         burger.addIngredient(ingredient2);
         burger.addIngredient(ingredient3);
         burger.moveIngredient(2, 1);
-        Assert.assertEquals(1, burger.ingredients.indexOf(ingredient3));
+        int expectedIndex = 1;
+        Assert.assertEquals(expectedIndex, burger.ingredients.indexOf(ingredient3));
     }
 
     @Test
